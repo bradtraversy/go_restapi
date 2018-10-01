@@ -83,8 +83,8 @@ func deleteBook(w http.ResponseWriter, r *http.Request) {
 			books = append(books[:index], books[index+1:]...)
 			break
 		}
-		json.NewEncoder(w).Encode(books)
 	}
+	json.NewEncoder(w).Encode(books)
 }
 
 // Main function
